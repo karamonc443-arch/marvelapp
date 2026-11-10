@@ -37,7 +37,13 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.core.ktx)
     implementation(libs.material)
+    // Librerías implementadas por mí
+    implementation(libs.gson)
+    implementation(libs.kotlinSerializationJson)
+    testImplementation(libs.mockkAgent)
+    testImplementation(libs.mockkAndroid)
     testImplementation(libs.junit)
+
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
 }
