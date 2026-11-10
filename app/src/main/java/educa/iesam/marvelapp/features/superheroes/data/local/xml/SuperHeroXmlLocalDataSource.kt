@@ -1,6 +1,7 @@
 package educa.iesam.marvelapp.features.superheroes.data.local.xml
 
 import android.content.Context
+import android.content.SharedPreferences
 import educa.iesam.marvelapp.R
 import educa.iesam.marvelapp.core.cache.AppCache
 import educa.iesam.marvelapp.core.serialization.JsonSerializer
@@ -14,7 +15,7 @@ class SuperHeroXmlLocalDataSource(
     private val keySuperHero: String = "superhero"
     private val timeToLive: Long = 5 * 60 * 100
 
-    val sharedPref = context.getSharedPreferences(
+    val sharedPref : SharedPreferences = context.getSharedPreferences(
         context.getString(R.string.local_source_superhero),
         Context.MODE_PRIVATE
     )
