@@ -8,4 +8,8 @@ class SuperHeroLocalDataSourceRepository(private val xmlLocalDataSource: SuperHe
     override fun getAll(): List<SuperHero> {
         return xmlLocalDataSource.findAll()
     }
+
+    override fun getById(id: String): SuperHero? {
+        return xmlLocalDataSource.findById(id)
+    }
 }
