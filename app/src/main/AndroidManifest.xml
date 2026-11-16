@@ -21,6 +21,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".features.superheroes.presentation.SuperHeroDetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MarvelApp"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".features.superheroes.presentation.SuperHeroDetalleActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>
