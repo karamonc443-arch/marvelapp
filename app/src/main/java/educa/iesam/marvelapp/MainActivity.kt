@@ -10,10 +10,11 @@ import androidx.core.view.*
 import educa.iesam.marvelapp.core.cache.AppCacheTimeToLive
 import educa.iesam.marvelapp.core.serialization.GsonJsonSerialiazer
 import educa.iesam.marvelapp.core.time.LocalAppTime
-import educa.iesam.marvelapp.features.superheroes.data.local.xml.SuperHeroLocalDataSourceRepository
+import educa.iesam.marvelapp.features.superheroes.data.local.SuperHeroLocalDataSourceRepository
 import educa.iesam.marvelapp.features.superheroes.data.local.xml.SuperHeroXmlLocalDataSource
 import educa.iesam.marvelapp.features.superheroes.domain.GetSuperHeroesUseCase
 import educa.iesam.marvelapp.features.superheroes.domain.SuperHero
+import educa.iesam.marvelapp.features.superheroes.domain.SuperHeroRepository
 import educa.iesam.marvelapp.features.superheroes.presentation.SuperHeroListVewModel
 
 class MainActivity : AppCompatActivity() {
@@ -23,7 +24,8 @@ class MainActivity : AppCompatActivity() {
                 this,
                 GsonJsonSerialiazer.create(),
                 AppCacheTimeToLive(this, LocalAppTime())
-            )
+            ),
+            remoteDataSource = TODO()
         )
     )
     private val viewModel : SuperHeroListVewModel by viewModels {
